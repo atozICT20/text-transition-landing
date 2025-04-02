@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✨ Next.js Animated Landing Page with Dynamic Effects
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15.2.4+-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1+-06B6D4?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.6+-black?style=flat)](https://www.framer.com/motion/)
 
-First, run the development server:
+![Project Preview](./public/preview.gif)
 
+## 🚀 Features
+
+- **Dynamic Mouse Tracking Effects**
+- **Smooth Text Animations**
+- **Interactive Particle System**
+- **Responsive Design**
+- **WebGL-ready Architecture**
+- **SSR-Compatible Animations**
+
+## 🛠 Technologies
+
+| Technology | Purpose |
+|------------|---------|
+| [Next.js](https://nextjs.org/) | React Framework |
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first CSS |
+| [Framer Motion](https://www.framer.com/motion/) | Animation Library |
+| [TypeScript](https://www.typescriptlang.org/) | Type Safety |
+| [Three.js](https://threejs.org/) (Optional) | 3D Effects |
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/atozICT20/text-transition-landing
+cd text-transition-landing
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3.Start development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
+## 🏗 Project Structure
+
+```bash
+src/
+├── app/
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/
+│   ├── AnimatedHero.tsx   # Main animation component
+│   └── TextTransition.tsx # Text effects
+├── styles/
+│   └── globals.css        # Global styles
+public/
+├── preview.gif            # Demo gif
+└── favicon.ico            # Site icon
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Change Content
+Modify `src/app/page.tsx`:
+```tsx
+const heroContent = {
+  title: "We Build",
+  words: ["Innovation", "Experiences", "Solutions"],
+  subtitle: "Creating digital magic for your brand"
+};
+```
+Update Colors
+Edit the gradient in AnimatedHero.tsx:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```tsx
+<motion.div 
+  className="absolute inset-0 bg-gradient-to-br from-blue-900 to-purple-600"
+  {/* ... */}
+/>
+```
+Adjust Animations
+Configure tailwind.config.ts:
 
-## Learn More
+```bash
+extend: {
+  animation: {
+    'fade-in': 'fadeIn 0.6s ease-out forwards',
+    'float': 'float 3s ease-in-out infinite'
+  }
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Vercel (Recommended)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/nextjs-animated-landing)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push to GitHub
+2. Import to Vercel
+3. Automatic deployments
 
-## Deploy on Vercel
+### Alternative Platforms
+- Netlify
+- AWS Amplify
+- Docker Container
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🐛 Troubleshooting
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Issue | Solution |
+|-------|----------|
+| Hydration Errors | Ensure 'use client' directives |
+| Missing Animations | Check Framer Motion version |
+| Performance Issues | Reduce particle count |
+
+
+## ✉️ Contact
+For support, email: 
+
+---
+
+**Enjoy creating beautiful animations!** 🎉
