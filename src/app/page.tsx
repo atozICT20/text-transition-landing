@@ -1,3 +1,4 @@
+import AnimatedHero from '@/components/AnimatedHero';
 import TextTransition from '@/components/TextTransition';
 
 const heroTexts = [
@@ -10,6 +11,7 @@ const heroTexts = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 to-purple-800">
+      <AnimatedHero />
       {/* Hero Section */}
       <section className="container mx-auto px-4 flex flex-col items-center justify-center min-h-[80vh] text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
